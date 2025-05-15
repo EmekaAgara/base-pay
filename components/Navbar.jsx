@@ -27,7 +27,7 @@ const Navbar = () => {
           className="cursor-pointer font-black text-2xl"
           onClick={() => router.push("/")}
         >
-          Base Payy
+          BasePayy
         </h1>
         <div className="items-center gap-4 md:flex lg:gap-8 max-md:hidden">
           <Link href="/" className="hover:text-white transition">

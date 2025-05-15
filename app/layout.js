@@ -9,7 +9,7 @@ import { Providers } from "@/context/CryptoProvider";
 const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 export const metadata = {
-  title: "Base Pay App",
+  title: "BasePay App",
   description: "Pay with Crypto ",
 };
 
