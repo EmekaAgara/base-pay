@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { assets } from "@/assets/assets";
+import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 import Footer from "@/components/seller/Footer";
@@ -144,7 +144,7 @@ const Orders = () => {
                             <div key={index} className="flex gap-3">
                               <div className="flex-shrink-0 h-16 w-16 rounded-md overflow-hidden bg-gray-900/50 border border-gray-800">
                                 <Image
-                                  src={item.product.image[0]}
+                                  src={item.product.image[0] || assets.box_icon}
                                   alt={item.product.name}
                                   width={64}
                                   height={64}

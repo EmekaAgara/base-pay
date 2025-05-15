@@ -1,6 +1,8 @@
 import React from "react";
+import { assets } from "@/assets/assets";
+import Image from "next/image";
 
-const Hero = () => {
+const Banner = () => {
   return (
     <section className="py-20 rounded-lg bg-[#111318] text-center px-6">
       <h2 className="text-3xl text-white font-bold mb-6">
@@ -17,4 +19,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Banner;
