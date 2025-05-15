@@ -37,7 +37,7 @@ const HeaderSlider = () => {
         {/* Centered container with two-column layout on desktop */}
         <div className="flex flex-col items-center justify-center gap-12">
           {/* Left Column - Content */}
-          <div className="w-full flex flex-col items-center lg:items-start text-center">
+          <div className="w-full flex flex-col items-center text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
