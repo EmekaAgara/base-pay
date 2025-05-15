@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 
-const HeaderSlider = () => {
+const Hero = () => {
   const { router } = useAppContext();
-  const paymentMethods = ["USDC", "ETH", "BTC", "SOL", "MATIC"];
+  const paymentMethods = ["List", "Buy", "Sell", "Post"];
   const [currentMethod, setCurrentMethod] = useState(0);
   const productImages = [
     "/crypto1.jpg",
@@ -42,9 +42,8 @@ const HeaderSlider = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-5xl lg:text-7xl font-medium leading-relaxed mb-6"
+              className="text-4xl sm:text-8xl  font-medium leading-relaxed mb-6"
             >
-              On BasePayy you Pay for all{" "}
               <motion.span
                 key={paymentMethods[currentMethod]}
                 initial={{ opacity: 0, y: -10 }}
@@ -54,19 +53,20 @@ const HeaderSlider = () => {
                 className="inline-block bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent"
               >
                 {paymentMethods[currentMethod]}
-              </motion.span>
-              <br className="hidden sm:block" /> Powered by{" "}
+              </motion.span>{" "}
+              Products & services <br />
+              securely on Basepayy{" "}
+              {/* <br className="hidden sm:block" /> Prouducts & Services{" "} */}
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-md sm:text-sm text-gray-300 max-w-2xl mb-8"
+              className="text-sm sm:text-md text-gray-300 max-w-2xl mb-8"
             >
-              List your products and services on our blockchain marketplace.
-              Accept secure crypto payments via Coinbase with zero middlemen
-              fees.
+              BasePay lets you list,buy and sell products and services without
+              borders. Fast, secure crypto payments. No middlemen. No limits.
             </motion.p>
 
             <motion.div
@@ -165,4 +165,4 @@ const HeaderSlider = () => {
   );
 };
 
-export default HeaderSlider;
+export default Hero;

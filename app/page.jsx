@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import HeaderSlider from "@/components/HeaderSlider";
-import HomeProducts from "@/components/HomeProducts";
+import Hero from "@/components/Hero";
+import Products from "@/components/Products";
 import Banner from "@/components/Banner";
 import NewsLetter from "@/components/NewsLetter";
-import FeaturedProduct from "@/components/FeaturedProduct";
+import How from "@/components/How";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -13,9 +13,9 @@ const Home = () => {
     <>
       <Navbar />
       <div className="px-6 mx-auto max-w-7xl">
-        <HeaderSlider />
-        <HomeProducts />
-        <FeaturedProduct />
+        <Hero />
+        <Products />
+        <How />
         <Banner />
         <NewsLetter />
       </div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import { useAppContext } from "@/context/AppContext";
 
-const HomeProducts = () => {
+const Products = () => {
   const { products, router } = useAppContext();
 
   return (
@@ -40,4 +40,4 @@ const HomeProducts = () => {
   );
 };
 
-export default HomeProducts;
+export default Products;

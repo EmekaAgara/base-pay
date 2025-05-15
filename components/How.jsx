@@ -3,7 +3,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const FeaturedProduct = () => {
+const How = () => {
   return (
     <div className="mt-14">
       {/* Features Section */}
@@ -48,4 +48,4 @@ const FeaturedProduct = () => {
   );
 };
 
-export default FeaturedProduct;
+export default How;
