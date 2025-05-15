@@ -35,7 +35,7 @@ const HeaderSlider = () => {
     <section className="bg-black text-gray-100 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-7xl mx-auto">
         {/* Centered container with two-column layout on desktop */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+        <div className="flex flex-col items-center justify-center gap-12">
           {/* Left Column - Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.h1
