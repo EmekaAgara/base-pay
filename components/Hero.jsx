@@ -54,8 +54,7 @@ const Hero = () => {
               >
                 {paymentMethods[currentMethod]}
               </motion.span>{" "}
-              Products & services <br />
-              securely on Basepayy{" "}
+              Products & services securely on Basepayy{" "}
               {/* <br className="hidden sm:block" /> Prouducts & Services{" "} */}
             </motion.h1>
 
