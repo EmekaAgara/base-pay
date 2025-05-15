@@ -113,13 +113,16 @@ const Hero = () => {
                     priority
                   />
                   {/* Product card overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent">
+                  <div
+                    onClick={() => router.push("/all-products")}
+                    className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"
+                  >
                     <div className="flex justify-between items-end">
                       <div>
-                        <h3 className="font-bold text-lg">Premium Product</h3>
-                        <p className="text-purple-300 font-medium">
-                          49.99 {paymentMethods[currentMethod]}
-                        </p>
+                        <h3 className="font-bold text-lg">
+                          Sample Product & Services
+                        </h3>
+                        <p className="text-purple-300 font-medium">$49.99</p>
                       </div>
                       <button className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg text-sm font-medium transition-all">
                         Buy Now

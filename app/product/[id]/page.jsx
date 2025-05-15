@@ -121,7 +121,7 @@ const Product = () => {
               <button
                 onClick={() => {
                   addToCart(productData._id);
-                  router.push("/cart");
+                  // router.push("/cart");
                 }}
                 className="w-full py-3.5 rounded bg-orange-500 text-white hover:bg-orange-600 transition"
               >
