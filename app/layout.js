@@ -9,8 +9,8 @@ import { Providers } from "@/context/CryptoProvider";
 const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 export const metadata = {
-  title: "QuickCart",
-  description: "E-Commerce with Next.js ",
+  title: "Base Pay App",
+  description: "Pay with Crypto ",
 };
 
 export default function RootLayout({ children }) {
