@@ -16,7 +16,7 @@ const SideBar = () => {
     { name: "Add Products", path: "/dashboard", icon: <FiHome /> },
     // { name: "Add Product", path: "/dashboard/add-product", icon: <FiPlus /> },
     { name: "Product List", path: "/dashboard/product-list", icon: <FiList /> },
-    { name: "Orders", path: "/dashboard/orders", icon: <FiShoppingBag /> },
+    // { name: "Orders", path: "/dashboard/orders", icon: <FiShoppingBag /> },
     // { name: "Customers", path: "/dashboard/customers", icon: <FiUsers /> },
     { name: "Settings", path: "/dashboard/settings", icon: <FiSettings /> },
   ];

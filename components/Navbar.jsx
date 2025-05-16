@@ -34,13 +34,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link href="/all-products" className="hover:text-white transition">
-            Shop
-          </Link>
-          <Link href="/" className="hover:text-white transition">
-            About Us
-          </Link>
-          <Link href="/" className="hover:text-white transition">
-            Contact
+            Explore
           </Link>
 
           {isSeller && (
