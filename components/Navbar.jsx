@@ -101,6 +101,18 @@ const Navbar = () => {
               Login
             </button>
           )}
+          <div className="flex gap-2">
+            <Wallet>
+              <ConnectWallet className="bg-gray" />
+              <WalletDropdown>
+                <WalletAdvancedWalletActions />
+                <WalletAdvancedAddressDetails />
+                <WalletAdvancedTransactionActions />
+                <WalletAdvancedTokenHoldings />
+              </WalletDropdown>
+            </Wallet>
+            {/* <FundButton /> */}
+          </div>
         </ul>
 
         <div className="flex z-10 items-center md:hidden gap-3">
