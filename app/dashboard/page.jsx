@@ -9,11 +9,12 @@ import {
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut, useClerk } from "@clerk/nextjs";
 import Link from "next/link";
 
 const AddProduct = () => {
   const { getToken } = useAppContext();
+  const { openSignIn, signOut } = useClerk();
   const [stats, setStats] = useState({
     transactions: 0,
     balance: 0,
@@ -113,7 +114,7 @@ const AddProduct = () => {
           </div>
 
           {/* Add Product Form */}
-          <div className="bg-[#111318] rounded shadow-xl p-6 max-w-4xl mx-auto">
+          <div className="bg-black rounded shadow-xl p-6 max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6 border-b border-gray-700 pb-3">
               Add New Product
             </h2>
@@ -141,7 +142,7 @@ const AddProduct = () => {
                         id={`image${index}`}
                         className="hidden"
                       />
-                      <div className="aspect-square w-full rounded-lg border-2 border-dashed border-gray-700 flex items-center justify-center bg-gray-900/50 group-hover:bg-gray-700 transition-colors overflow-hidden">
+                      <div className="aspect-square w-full rounded-lg border-2 border-dashed border-gray-700 flex items-center justify-center bg-black group-hover:bg-gray-700 transition-colors overflow-hidden">
                         {files[index] ? (
                           <img
                             src={URL.createObjectURL(files[index])}
@@ -174,7 +175,7 @@ const AddProduct = () => {
                   id="product-name"
                   type="text"
                   placeholder="Enter product name"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                   required
@@ -192,7 +193,7 @@ const AddProduct = () => {
                 <textarea
                   id="product-description"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition resize-none"
                   placeholder="Describe your product..."
                   onChange={(e) => setDescription(e.target.value)}
                   value={description}
@@ -211,7 +212,7 @@ const AddProduct = () => {
                   </label>
                   <select
                     id="category"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
+                    className="w-full px-4 py-3 rounded-lg bg-black border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
                     onChange={(e) => setCategory(e.target.value)}
                     defaultValue={category}
                   >
@@ -236,7 +237,7 @@ const AddProduct = () => {
                       id="product-price"
                       type="number"
                       placeholder="0.00"
-                      className="w-full pl-8 pr-4 py-3 rounded-lg bg-gray-900 border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
+                      className="w-full pl-8 pr-4 py-3 rounded-lg bg-black border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
                       onChange={(e) => setPrice(e.target.value)}
                       value={price}
                       required
@@ -259,7 +260,7 @@ const AddProduct = () => {
                       id="offer-price"
                       type="number"
                       placeholder="0.00"
-                      className="w-full pl-8 pr-4 py-3 rounded-lg bg-gray-900 border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
+                      className="w-full pl-8 pr-4 py-3 rounded-lg bg-black border border-gray-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
                       onChange={(e) => setOfferPrice(e.target.value)}
                       value={offerPrice}
                       required
@@ -316,12 +317,12 @@ const AddProduct = () => {
           <p className="text-gray-400 mb-6">
             You need to create an account or sign in to continue.
           </p>
-          <Link
-            href="/sign-in"
-            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg transition"
+          <div
+            onClick={openSignIn}
+            className="px-6 py-3 cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg transition"
           >
             Sign In / Create Account
-          </Link>
+          </div>
         </div>
       </SignedOut>
     </>
